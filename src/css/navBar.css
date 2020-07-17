@@ -1,0 +1,98 @@
+.mainWindow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(150, 150, 160);
+}
+
+.mainWindowContainer {
+  margin-top: 15%;
+  width: 100%;
+  height: 100%;
+}
+
+.sectionDiv {
+  width: 100%;
+  position: relative;
+  display: inline-flex;
+  margin: 0;
+}
+
+.innerDiv {
+  text-align: left;
+  margin-left: 5%;
+  width: 80%;
+  overflow: hidden;
+}
+
+.arrowLeft {
+  margin-top: 5%;
+  margin-left: 5%;
+  font-size: 4em;
+  font-weight: 500;
+  color: rgb(50, 50, 55);
+}
+
+.arrowRight {
+  margin-top: 5%;
+  margin-right: 5%;
+  font-size: 4em;
+  font-weight: 500;
+  color: rgb(50, 50, 55);
+}
+
+.navBar {
+  position: fixed;
+  top: 0px;
+  border-radius: 0 !important;
+  background-color: rgb(20, 20, 25);
+}
+
+.bottomNavBar {
+  position: fixed;
+  margin-bottom: 3px;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  border-radius: 0 !important;
+  background-color: rgb(20, 20, 25);
+  text-align: right;
+}
+
+.cornerIcon {
+  margin-right: px;
+  font-weight: 800;
+  font-size: 20px;
+  color: rgb(200, 200, 210);
+  font-family: "Courier New";
+  user-select: none;
+}
+
+.navBarItem {
+  position: relative;
+  margin-left: 20px;
+  font-weight: 800;
+  font-size: 20px;
+  color: rgb(200, 200, 210);
+  font-family: "Courier New";
+  user-select: none;
+}
+
+.bottomNavBarItem {
+  display: inline-flex;
+  font-size: 20px;
+  color: rgb(200, 200, 210);
+  margin-right: 25px;
+  font-family: "Courier New";
+}
+
+.bottomNavBarItem:hover {
+  cursor: pointer;
+  color: rgb(90, 90, 97);
+}
+
+.burgerButton {
+  margin-right: 10%;
+  font-size: 20px;
+  color: rgb(200, 200, 210);
+}
