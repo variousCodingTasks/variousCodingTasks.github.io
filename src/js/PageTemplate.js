@@ -2,7 +2,6 @@ import { render } from "react-dom";
 import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import NavBar from "./NavBar";
 import BottomNavBar from "./BottomNavBar";
@@ -14,8 +13,8 @@ class PageTemplate extends Component {
     return (
       <div className="mainWindow">
         <NavBar />
-        <div className="mainWindowContainer">
-          <div className="sectionDiv">
+        <div className="d-flex justify-content-center mainWindowContainer">
+          <div className="d-flex justify-content-center align-items-center sectionDiv">
             <Link
               to={
                 ROUTES[

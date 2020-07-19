@@ -6,22 +6,20 @@
 }
 
 .mainWindowContainer {
-  margin-top: 15%;
   width: 100%;
   height: 100%;
 }
 
 .sectionDiv {
-  width: 100%;
-  position: relative;
-  display: inline-flex;
+  max-height: 60%;
+  width: 80%;
   margin: 0;
 }
 
 .innerDiv {
   text-align: left;
   margin-left: 5%;
-  width: 80%;
+  width: 70%;
   overflow: hidden;
 }
 
@@ -95,4 +93,23 @@
   margin-right: 10%;
   font-size: 20px;
   color: rgb(200, 200, 210);
+}
+
+.transition-enter {
+  opacity: 0.01;
+  transform: translate(0, -10px);
+}
+.transition-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 300ms ease-in;
+}
+.transition-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.transition-exit-active {
+  opacity: 0.01;
+  transform: translate(0, 10px);
+  transition: all 300ms ease-in;
 }
