@@ -21,7 +21,7 @@ class NavBar extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className="nav navbar-nav">
-            <span className="cornerIcon">{"{{Ibrahim Biatra}}"}</span>
+            <span className="cornerIcon">{"{{Ibrahim_B}}"}</span>
             <NavLink to="/" className="navBarItem">
               Background
             </NavLink>

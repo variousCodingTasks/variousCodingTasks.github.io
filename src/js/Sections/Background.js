@@ -5,33 +5,27 @@ import PageTemplate from "../PageTemplate";
 
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
+const title = "Some background:";
+
+const paragraph1 =
+  "I am a seasoned financial services professional, a software engineer, and data enthusiast… I taught myself\
+   programming, started with Python and then some more, but as I progressed, I wanted to check out the nuts and\
+    bolts (algorithms, data structures, computer organization…), so after some online courses , I decided it was\
+     time to make it formal and earn some degrees in Computer science.";
+const paragraph2 =
+  "I have a solid background in math, statistics, economics, and finance, so I (naturally) love\
+                       data in all shapes and sizes: I spend a lot of time examining, modeling, visualizing and processing it and\
+                        enjoyed learning the all the technical tools required.";
+
 class BackgroundSection extends Component {
   render() {
-    const items = [
-      <h1>this is the main section bbb</h1>,
-      <h1>this is the main section</h1>,
-      <h1>this is the main section</h1>,
-      <h1>this is the main section</h1>,
-      <h1>this is the main section</h1>,
-    ];
     return (
-      /*<PageTemplate sectionIndex={this.props.sectionIndex}>
-        <section>
-          <h1>this is the main section bbb</h1>
-          <h1>this is the main section</h1>
-          <h1>this is the main section</h1>
-          <h1>this is the main section</h1>
-          <h1>this is the main section</h1>
-        </section>
-    </PageTemplate>*/
       <PageTemplate sectionIndex={this.props.sectionIndex}>
-        <TransitionGroup>
-          {items.map((item, index) => (
-            <CSSTransition key={index} timeout={1000} classNames="transition">
-              {item}
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
+        <section>
+          <h1 className="title">{title}</h1>
+          <p className="paragraph">{paragraph1}</p>
+          <p className="paragraph">{paragraph2}</p>
+        </section>
       </PageTemplate>
     );
   }
