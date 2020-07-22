@@ -56,6 +56,10 @@
   font-weight: 700;
 }
 
+.bottomDiv {
+  min-height: 50%;
+}
+
 .listItem {
   text-align: justify;
   font-size: 18px;

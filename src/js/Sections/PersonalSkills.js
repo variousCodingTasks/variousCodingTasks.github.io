@@ -19,11 +19,6 @@ class PersonalSkillsSection extends Component {
         <section>
           <h1 className="title">{title}</h1>
           <p className="paragraph">{paragraph1}</p>
-          <h1 className="title">
-            {
-              "Please find below a link to my linkedin profile, If you'd like to contact me."
-            }
-          </h1>
         </section>
       </PageTemplate>
     );
