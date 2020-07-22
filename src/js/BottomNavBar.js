@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 class BottomNavBar extends Component {
   render() {
     return (
-      <div className="bottomNavBar">
+      <div className="fixed-bottom bottomNavBar">
         <div
           className="bottomNavBarItem"
           onClick={() =>
             window.open("https://www.linkedin.com/in/ibrahim-biatra/", "_blank")
           }
         >
-          {"linkedin"}
+          <span className="fab fa-linkedin"></span>
         </div>
         <div
           className="bottomNavBarItem"
@@ -21,7 +21,7 @@ class BottomNavBar extends Component {
             window.open("https://github.com/variousCodingTasks", "_blank")
           }
         >
-          {"github"}
+          <span className="fab fa-github"></span>
         </div>
         <div
           className="bottomNavBarItem"

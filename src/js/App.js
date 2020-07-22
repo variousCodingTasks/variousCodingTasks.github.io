@@ -4,11 +4,25 @@ import React, { Component } from "react";
 import { BrowserRouter, HashRouter, Route } from "react-router-dom";
 
 import BackgroundSection from "./Sections/Background";
+import ProfesionalSection from "./Sections/Professional";
+import EducationSection from "./Sections/Education";
 import TechSkillsSection from "./Sections/TechSkills";
+import PersonalSkillsSection from "./Sections/PersonalSkills";
 
 export const ROUTES = [
   { path: "/", name: "Background", Component: BackgroundSection },
-  { path: "/techSkills", name: "TechSkills", Component: TechSkillsSection },
+  {
+    path: "/professional",
+    name: "Professional",
+    Component: ProfesionalSection,
+  },
+  { path: "/education", name: "Education", Component: EducationSection },
+  { path: "/techSkills", name: "Tech_Skills", Component: TechSkillsSection },
+  {
+    path: "/personalSkills",
+    name: "Personal_Skills",
+    Component: PersonalSkillsSection,
+  },
 ];
 
 class MainApp extends Component {
@@ -20,8 +34,8 @@ class MainApp extends Component {
             key={path}
             exact
             path={path}
-            render={() => <Component sectionIndex={index} />}
-          ></Route>
+            render={(props) => <Component sectionIndex={index} />}
+          />
         ))}
       </HashRouter>
     );

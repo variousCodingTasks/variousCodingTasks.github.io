@@ -3,6 +3,8 @@ import React, { Component } from "react";
 
 import { NavLink, Link } from "react-router-dom";
 
+import { ROUTES } from "./App";
+
 class NavBar extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +12,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navBar">
+      <nav className="navbar fixed-top navbar-expand-lg navBar">
         <button
           type="button"
           className="navbar-toggler"
@@ -22,13 +24,28 @@ class NavBar extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className="nav navbar-nav">
             <span className="cornerIcon">{"{{Ibrahim_B}}"}</span>
+            {ROUTES.map(({ path, name, Component }, index) => (
+              <NavLink
+                key={index}
+                to={path}
+                className={
+                  index === this.props.sectionIndex
+                    ? "selectedNavBarItem"
+                    : "navBarItem"
+                }
+              >
+                {name}
+              </NavLink>
+            ))}
+
+            {/*
             <NavLink to="/" className="navBarItem">
               Background
             </NavLink>
             <NavLink to="/techSkills" className="navBarItem">
               Tech_Skills
             </NavLink>
-            {/*<NavLink to="/" className="navBarItem">
+            <NavLink to="/" className="navBarItem">
               Education
             </NavLink>
             <NavLink to="/" className="navBarItem">

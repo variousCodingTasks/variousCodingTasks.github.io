@@ -5,41 +5,63 @@ import PageTemplate from "../PageTemplate";
 
 const title = "Technical Skills";
 
-class BackgroundSection extends Component {
+class TechSkillsSection extends Component {
   render() {
     return (
       <PageTemplate sectionIndex={this.props.sectionIndex}>
         <section>
-          <h1 calssName="title">{title}</h1>
-          <h3>{"Programming Languages:"}</h3>
+          <h1 className="title">{title}</h1>
+          <h3 className="secondaryTitle">{"Programming Languages:"}</h3>
+          <ul>
+            <li className="listItemNoBullet sameLineListItem">
+              <span className="fab fa-python"></span>
+              {" Python"}
+            </li>
+            <li className="listItemNoBullet sameLineListItem">
+              <span className="fab fa-java"></span>
+              {" Java"}
+            </li>
+            <li className="listItemNoBullet sameLineListItem">{" C/C++"}</li>
+            <li className="listItemNoBullet sameLineListItem">
+              <span className="fab fa-js"></span>
+              {" JavaScript"}
+            </li>
+            <li className="listItemNoBullet sameLineListItem">
+              <span className="fab fa-html5"></span>
+              {" HTML"}
+            </li>
+          </ul>
+          <h3 className="secondaryTitle">{"Libraries and Frameworks:"}</h3>
           <ul>
             <li className="listItem">
               {
-                "Python: Did projects at work and during my studies. Great community and ecosystem."
+                "Python: Django, Django Rest Framework, NumPy, pandas, Jupyter, matplotlib, scikit-learn"
+              }
+            </li>
+            <li className="listItem">
+              {"JavaScript Ecosystem: Node.js, React.js, D3.js, npm, webpack"}
+            </li>
+            <li className="listItem">
+              {
+                "Data Stuff: SQL(MySQL, SQLite, MS-SQL), Excel and VBA, MongoDB, JSON, XML and more"
               }
             </li>
             <li className="listItem">
               {
-                "Java: Did projects at work and during my studies. Superb standard library!"
-              }
-            </li>
-            <li className="listItem">
-              {
-                "C/C++: Did a lot of projects during my studies. Lightning fast performance."
-              }
-            </li>
-            <li className="listItem">
-              {
-                "JavaScript: Some projects at work, very fond of Node.js and React.js!"
+                "Programming and Software Engineering Knowledge: data structures, algorithm design and analysis, oop, functinal programming,\
+                concurrent programming, networking, IT and DevOps, Unix/Linux, GUI design"
               }
             </li>
           </ul>
-          <h3>{"Libraries and Frameworks:"}</h3>
+          <h3 className="secondaryTitle">{"I know finance as well..."}</h3>
           <ul>
-            <li className="listItem">{"Python: Django, NumPy, "}</li>
-            <li className="listItem">{"Java: "}</li>
-            <li className="listItem">{"C/C++: "}</li>
-            <li className="listItem">{"JavaScript: "}</li>
+            <li className="listItem">
+              {
+                "complex asset valuation, financial modelling and analysis, financial data,\
+                  computational finance, fintech, middle office and back office operations,\
+                  risk modeling, and I know how to use the computer stuff in order to enhance the finance stuff..."
+              }
+            </li>
           </ul>
         </section>
       </PageTemplate>
@@ -47,4 +69,4 @@ class BackgroundSection extends Component {
   }
 }
 
-export default BackgroundSection;
+export default TechSkillsSection;

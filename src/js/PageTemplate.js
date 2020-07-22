@@ -1,7 +1,7 @@
 import { render } from "react-dom";
 import React, { Component } from "react";
 
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import "react-perfect-scrollbar/dist/css/styles.css";
@@ -11,23 +11,51 @@ import BottomNavBar from "./BottomNavBar";
 import { ROUTES } from "./App";
 
 class PageTemplate extends Component {
+  constructor(props) {
+    super(props);
+
+    this.nextSection = this.nextSection.bind(this);
+    this.prevSection = this.prevSection.bind(this);
+    this.handleWheel = this.handleWheel.bind(this);
+  }
+
+  nextSection() {
+    this.props.history.push(
+      ROUTES[(this.props.sectionIndex + 1) % ROUTES.length]["path"]
+    );
+  }
+
+  prevSection() {
+    this.props.history.push(
+      ROUTES[
+        this.props.sectionIndex === 0
+          ? ROUTES.length - 1
+          : this.props.sectionIndex - 1
+      ]["path"]
+    );
+  }
+
+  handleWheel(event) {
+    if (event.nativeEvent.wheelDelta > 0) {
+      this.prevSection();
+    } else {
+      this.nextSection();
+    }
+  }
+
   render() {
     const sectionIndex = this.props.sectionIndex;
     const items = React.Children.toArray(this.props.children);
     return (
-      <div className="mainWindow">
-        <NavBar />
+      <div className="mainWindow" onWheel={(e) => this.handleWheel(e)}>
+        <NavBar sectionIndex={sectionIndex} />
+
         <div className="d-flex justify-content-center mainWindowContainer">
           <div className="d-flex justify-content-center align-items-center sectionDiv">
-            <Link
-              to={
-                ROUTES[
-                  sectionIndex === 0 ? ROUTES.length - 1 : sectionIndex - 1
-                ]["path"]
-              }
-            >
-              <div className="glyphicon glyphicon-chevron-left arrowLeft"></div>
-            </Link>
+            <div
+              className="glyphicon glyphicon-chevron-left arrowLeft"
+              onClick={this.prevSection}
+            ></div>
 
             <div className="innerDiv">
               <PerfectScrollbar className="scroller">
@@ -47,15 +75,17 @@ class PageTemplate extends Component {
               </PerfectScrollbar>
             </div>
 
-            <Link to={ROUTES[(sectionIndex + 1) % ROUTES.length]["path"]}>
-              <div className="glyphicon glyphicon-chevron-right arrowRight"></div>
-            </Link>
+            <div
+              className="glyphicon glyphicon-chevron-right arrowRight"
+              onClick={this.nextSection}
+            ></div>
           </div>
         </div>
+
         <BottomNavBar />
       </div>
     );
   }
 }
 
-export default PageTemplate;
+export default withRouter(PageTemplate);
