@@ -21,13 +21,18 @@
 }
 
 .innerDiv {
-  position: relative;
+  position: absolute;
   max-height: 95%;
-  text-align: left;
-  margin-left: 5%;
-  margin-right: 5%;
   max-width: 75%;
   min-width: 75%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  text-align: left;
   font-weight: bold;
   font-family: "Courier New";
   color: rgb(40, 40, 44);
@@ -42,8 +47,7 @@
 }
 
 .conatiningDiv {
-  max-height: 900px; /* e.g. */
-  min-height: 900px;
+  text-align: center;
   overflow: hidden;
 }
 
