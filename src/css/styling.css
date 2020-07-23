@@ -23,13 +23,13 @@
 .innerDiv {
   position: absolute;
   max-height: 95%;
-  max-width: 75%;
-  min-width: 75%;
-  margin-left: 5%;
-  margin-right: 5%;
+  max-width: 90%;
+  min-width: 90%;
+
+  left: 50%;
   top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+
   text-align: left;
   font-weight: bold;
   font-family: "Courier New";
