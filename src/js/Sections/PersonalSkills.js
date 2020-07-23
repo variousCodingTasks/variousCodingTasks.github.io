@@ -7,7 +7,7 @@ const title = "Personal Skills";
 
 const paragraph1 =
   "I have well developed problem solving skills, business acumen, anlytical thinking and quantitative skills.\
-  I am an autodidact and a quick learner, I pay great attention to details and I focs on the whole picture. \
+  I am an autodidact and a quick learner, I pay great attention to details and I focus on the whole picture. \
   I worked in teams and led teams, I like to learn from colleagues, and when possible, I like to teach others\
   from my experience. I can work under pressure and uncertainty. My knowledge and experience are multidisciplinary,\
   and when required, I can become a specialist in any field...";
