@@ -36,10 +36,16 @@ class PageTemplate extends Component {
   }
 
   handleWheel(event) {
-    if (event.nativeEvent.wheelDelta > 0) {
-      this.prevSection();
-    } else {
-      this.nextSection();
+    console.log(event.target.id);
+    if (
+      event.target.id == "mainWindowCon" ||
+      event.target.id == "secionDivComp"
+    ) {
+      if (event.nativeEvent.wheelDelta > 0) {
+        this.prevSection();
+      } else {
+        this.nextSection();
+      }
     }
   }
 
@@ -50,15 +56,21 @@ class PageTemplate extends Component {
       <div className="mainWindow" onWheel={(e) => this.handleWheel(e)}>
         <NavBar sectionIndex={sectionIndex} />
 
-        <div className="d-flex justify-content-center mainWindowContainer">
-          <div className="d-flex justify-content-center align-items-center sectionDiv">
+        <div
+          className="d-flex justify-content-center mainWindowContainer"
+          id="mainWindowCon"
+        >
+          <div
+            className="d-flex justify-content-center align-items-center sectionDiv"
+            id="secionDivComp"
+          >
             <div
               className="glyphicon glyphicon-chevron-left arrowLeft"
               onClick={this.prevSection}
             ></div>
 
-            <div className="innerDiv">
-              <PerfectScrollbar className="scroller">
+            <PerfectScrollbar className="scroller">
+              <div className="innerDiv">
                 <div className="conatiningDiv">
                   {items.map((item, index) => (
                     <CSSTransition
@@ -72,8 +84,8 @@ class PageTemplate extends Component {
                     </CSSTransition>
                   ))}
                 </div>
-              </PerfectScrollbar>
-            </div>
+              </div>
+            </PerfectScrollbar>
 
             <div
               className="glyphicon glyphicon-chevron-right arrowRight"
