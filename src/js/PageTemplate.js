@@ -104,8 +104,8 @@ class PageTemplate extends Component {
       <div
         className="mainWindow"
         onWheel={(e) => this.handleWheel(e)}
-        onTouchStart={(e) => this.handleTouchStart(e)}
-        onTouchEnd={(e) => this.handleTouchEnd(e)}
+        /*onTouchStart={(e) => this.handleTouchStart(e)}
+        onTouchEnd={(e) => this.handleTouchEnd(e)}*/
       >
         <NavBar sectionIndex={sectionIndex} />
 
@@ -116,8 +116,6 @@ class PageTemplate extends Component {
           <div
             className="d-flex justify-content-center align-items-center sectionDiv"
             id="secionDivComp"
-            /*onTouchStart={(e) => this.handleTouchStart(e)}
-            onTouchEnd={(e) => this.handleTouchEnd(e)}*/
           >
             <div
               className="glyphicon glyphicon-chevron-left arrowLeft"
