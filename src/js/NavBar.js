@@ -12,7 +12,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar fixed-top navbar-expand-xl navBar">
+      <nav className="navbar fixed-top navbar-expand-md navBar">
         <button
           type="button"
           className="navbar-toggler"
@@ -22,7 +22,7 @@ class NavBar extends Component {
           <span className="glyphicon glyphicon-align-justify burgerButton"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <div className="nav navbar-nav">
+          <div className="navbar-nav">
             <span className="cornerIcon">{"{{Ibrahim_B}}"}</span>
             {ROUTES.map(({ path, name, Component }, index) => (
               <NavLink

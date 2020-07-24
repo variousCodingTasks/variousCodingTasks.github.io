@@ -10,17 +10,17 @@ import TechSkillsSection from "./Sections/TechSkills";
 import PersonalSkillsSection from "./Sections/PersonalSkills";
 
 export const ROUTES = [
-  { path: "/", name: "Background", Component: BackgroundSection },
+  { path: "/", name: "Intro", Component: BackgroundSection },
   {
     path: "/professional",
     name: "Professional",
     Component: ProfesionalSection,
   },
   { path: "/education", name: "Education", Component: EducationSection },
-  { path: "/techSkills", name: "Tech_Skills", Component: TechSkillsSection },
+  { path: "/techSkills", name: "Technical", Component: TechSkillsSection },
   {
     path: "/personalSkills",
-    name: "Personal_Skills",
+    name: "Personal",
     Component: PersonalSkillsSection,
   },
 ];

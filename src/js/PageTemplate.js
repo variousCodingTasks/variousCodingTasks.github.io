@@ -10,6 +10,11 @@ import NavBar from "./NavBar";
 import BottomNavBar from "./BottomNavBar";
 import { ROUTES } from "./App";
 
+var touchstartX = 0;
+var touchstartY = 0;
+var touchendX = 0;
+var touchendY = 0;
+
 class PageTemplate extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +23,8 @@ class PageTemplate extends Component {
     this.prevSection = this.prevSection.bind(this);
     this.handleWheel = this.handleWheel.bind(this);
     this.handleKeyPressed = this.handleKeyPressed.bind(this);
+    this.handleTouchStart = this.handleTouchStart.bind(this);
+    this.handleTouchEnd = this.handleTouchEnd.bind(this);
   }
 
   nextSection() {
@@ -54,6 +61,34 @@ class PageTemplate extends Component {
     else if (event.which === 37) this.prevSection();
   }
 
+  handleTouchStart(event) {
+    /*console.log("start", event.touches[0].clientX, event.touches[0].clientY);*/
+    touchstartX = event.touches[0].clientX;
+    touchstartY = event.touches[0].clientY;
+  }
+
+  handleTouchEnd(event) {
+    /*console.log(
+      "end",
+      event.changedTouches[0].clientX,
+      event.changedTouches[0].clientY
+    );*/
+    touchendX = event.changedTouches[0].clientX;
+    touchendY = event.changedTouches[0].clientY;
+    this.handleGesture();
+  }
+
+  handleGesture() {
+    const threshold = 30;
+    let dx = touchstartX - touchendX,
+      dy = touchstartY - touchendY;
+    if (Math.abs(dy) < threshold) {
+      if (dx > threshold) this.nextSection();
+      //console.log("swiped left");
+      else if (dx < -threshold) this.prevSection(); //console.log("swiped right");
+    }
+  }
+
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyPressed, false);
   }
@@ -66,7 +101,12 @@ class PageTemplate extends Component {
     const sectionIndex = this.props.sectionIndex;
     const items = React.Children.toArray(this.props.children);
     return (
-      <div className="mainWindow" onWheel={(e) => this.handleWheel(e)}>
+      <div
+        className="mainWindow"
+        onWheel={(e) => this.handleWheel(e)}
+        onTouchStart={(e) => this.handleTouchStart(e)}
+        onTouchEnd={(e) => this.handleTouchEnd(e)}
+      >
         <NavBar sectionIndex={sectionIndex} />
 
         <div
@@ -76,6 +116,8 @@ class PageTemplate extends Component {
           <div
             className="d-flex justify-content-center align-items-center sectionDiv"
             id="secionDivComp"
+            /*onTouchStart={(e) => this.handleTouchStart(e)}
+            onTouchEnd={(e) => this.handleTouchEnd(e)}*/
           >
             <div
               className="glyphicon glyphicon-chevron-left arrowLeft"
