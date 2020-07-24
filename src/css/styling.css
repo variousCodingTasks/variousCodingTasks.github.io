@@ -32,7 +32,6 @@
 
   text-align: left;
   font-weight: bold;
-  font-family: "Courier New";
   color: rgb(40, 40, 44);
 }
 
@@ -191,7 +190,10 @@
 
 .bottomNavBarItem:hover {
   cursor: pointer;
+  font-size: 21px;
   color: rgb(90, 90, 97);
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
 }
 
 .burgerButton {

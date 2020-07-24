@@ -12,7 +12,7 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navbar fixed-top navbar-expand-lg navBar">
+      <nav className="navbar fixed-top navbar-expand-xl navBar">
         <button
           type="button"
           className="navbar-toggler"
@@ -37,26 +37,6 @@ class NavBar extends Component {
                 {name}
               </NavLink>
             ))}
-
-            {/*
-            <NavLink to="/" className="navBarItem">
-              Background
-            </NavLink>
-            <NavLink to="/techSkills" className="navBarItem">
-              Tech_Skills
-            </NavLink>
-            <NavLink to="/" className="navBarItem">
-              Education
-            </NavLink>
-            <NavLink to="/" className="navBarItem">
-              Professional
-            </NavLink>
-            <NavLink to="/" className="navBarItem">
-              Personal_Skills
-            </NavLink>
-            <NavLink to="/" className="navBarItem">
-              Courses
-          </NavLink>*/}
           </div>
         </div>
       </nav>

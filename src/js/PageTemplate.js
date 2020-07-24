@@ -17,6 +17,7 @@ class PageTemplate extends Component {
     this.nextSection = this.nextSection.bind(this);
     this.prevSection = this.prevSection.bind(this);
     this.handleWheel = this.handleWheel.bind(this);
+    this.handleKeyPressed = this.handleKeyPressed.bind(this);
   }
 
   nextSection() {
@@ -36,7 +37,6 @@ class PageTemplate extends Component {
   }
 
   handleWheel(event) {
-    console.log(event.target.id);
     if (
       event.target.id == "mainWindowCon" ||
       event.target.id == "secionDivComp"
@@ -47,6 +47,19 @@ class PageTemplate extends Component {
         this.nextSection();
       }
     }
+  }
+
+  handleKeyPressed(event) {
+    if (event.which === 39) this.nextSection();
+    else if (event.which === 37) this.prevSection();
+  }
+
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyPressed, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyPressed, false);
   }
 
   render() {
