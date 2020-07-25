@@ -2,6 +2,7 @@ import { render } from "react-dom";
 import React, { Component } from "react";
 
 import PageTemplate from "../PageTemplate";
+import StarRating from "./StarRating";
 
 const title = "Technical Skills";
 
@@ -12,23 +13,31 @@ class TechSkillsSection extends Component {
         <section>
           <h1 className="title">{title}</h1>
           <h3 className="secondaryTitle">{"Programming Languages:"}</h3>
-          <ul>
-            <li className="listItemNoBullet sameLineListItem">
+          <ul className="list-group progListUL">
+            <li className="listItemNoBullet sameLineItems">
               <span className="fab fa-python"></span>
-              {" Python"}
+              <span className="progLSpaces">{"Python"}</span>
+              <StarRating rating={5} />
             </li>
-            <li className="listItemNoBullet sameLineListItem">
+            <li className="listItemNoBullet sameLineItems">
               <span className="fab fa-java"></span>
-              {" Java"}
+              <span className="progLSpaces">{"Java"}</span>
+              <StarRating rating={4} />
             </li>
-            <li className="listItemNoBullet sameLineListItem">{" C/C++"}</li>
-            <li className="listItemNoBullet sameLineListItem">
+            <li className="listItemNoBullet sameLineItems">
+              <span className="cIcon">{"C"}</span>
+              <span className="progLSpaces">{"C/C++"}</span>
+              <StarRating rating={4} />
+            </li>
+            <li className="listItemNoBullet sameLineItems">
               <span className="fab fa-js"></span>
-              {" JavaScript"}
+              <span className="progLSpaces">{"JavaScript"}</span>
+              <StarRating rating={4} />
             </li>
-            <li className="listItemNoBullet sameLineListItem">
+            <li className="listItemNoBullet sameLineItems">
               <span className="fab fa-html5"></span>
-              {" HTML"}
+              <span className="progLSpaces">{"HTML"}</span>
+              <StarRating rating={4} />
             </li>
           </ul>
           <h3 className="secondaryTitle">{"Libraries and Frameworks:"}</h3>
@@ -48,8 +57,14 @@ class TechSkillsSection extends Component {
             </li>
             <li className="listItem">
               {
-                "Programming and Software Engineering Knowledge: data structures, algorithm design and analysis, oop, functinal programming,\
-                concurrent programming, networking, IT and DevOps, Unix/Linux, GUI design"
+                "Programming and Software Engineering Knowledge: data structures, algorithm design and analysis, oop, functinal and\
+                 procedural programming, concurrent programming, GUI design"
+              }
+            </li>
+            <li className="listItem">
+              {
+                "IT: networking, IT and DevOps, Unix/Linux, windows server administration, infrastructure and\
+                hardware configuration."
               }
             </li>
           </ul>

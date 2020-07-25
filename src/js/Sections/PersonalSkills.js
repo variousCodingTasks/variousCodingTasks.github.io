@@ -7,8 +7,10 @@ const title = "Personal Skills";
 
 const paragraph1 =
   "I have well developed problem solving skills, business acumen, anlytical thinking and quantitative skills.\
-  I am an autodidact and a quick learner, I pay great attention to details and I focus on the whole picture. \
-  I worked in teams and led teams, I like to learn from colleagues, and when possible, I like to teach others\
+  I am an autodidact and a quick learner, I pay great attention to details and I focus on the whole picture.";
+
+const paragraph2 =
+  "I worked in teams and led teams, I like to learn from colleagues, and when possible, I like to teach others\
   from my experience. I can work under pressure and uncertainty. My knowledge and experience are multidisciplinary,\
   and when required, I can become a specialist in any field...";
 
@@ -19,6 +21,7 @@ class PersonalSkillsSection extends Component {
         <section>
           <h1 className="title">{title}</h1>
           <p className="paragraph">{paragraph1}</p>
+          <p className="paragraph">{paragraph2}</p>
         </section>
       </PageTemplate>
     );

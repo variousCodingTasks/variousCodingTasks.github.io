@@ -12,7 +12,7 @@ const traditionParagraph1 =
 
 const traditionParagraph2 =
   "Besides e-trading, I try to solve operatinal problems with code: whenever I face\
-    a new problem, I learn the tools needed an implement the solution. I built\
+    a new problem, I learn the tools needed and implement the solution. I built\
     pricing tools, data processing and visualiztion tools and transaction processing\
     tools. I also like to automate any process I find to be boring and repetitive.\
     I use any technologies or tools I find suitable, but mainly Python, SQL, Excel\
