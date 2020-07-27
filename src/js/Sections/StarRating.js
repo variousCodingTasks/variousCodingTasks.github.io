@@ -9,9 +9,9 @@ class StarRating extends Component {
       <div>
         {range5.map((index) =>
           index < rating + 1 ? (
-            <span class="fa fa-star"></span>
+            <span className="fa fa-star" key={index}></span>
           ) : (
-            <span class="fa fa-star unMarkedStar"></span>
+            <span className="fa fa-star unMarkedStar" key={index}></span>
           )
         )}
       </div>

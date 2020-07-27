@@ -3,8 +3,7 @@ import React, { Component } from "react";
 
 import { withRouter } from "react-router";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import PerfectScrollbar from "react-perfect-scrollbar";
-import "react-perfect-scrollbar/dist/css/styles.css";
+import { isMobile } from "react-device-detect";
 
 import NavBar from "./NavBar";
 import BottomNavBar from "./BottomNavBar";
@@ -104,26 +103,35 @@ class PageTemplate extends Component {
       <div
         className="mainWindow"
         onWheel={(e) => this.handleWheel(e)}
-        /*onTouchStart={(e) => this.handleTouchStart(e)}
-        onTouchEnd={(e) => this.handleTouchEnd(e)}*/
+        onTouchStart={(e) => this.handleTouchStart(e)}
+        onTouchEnd={(e) => this.handleTouchEnd(e)}
       >
         <NavBar sectionIndex={sectionIndex} />
+        {isMobile ? (
+          <div className="swipeIcon">
+            <span className={"glyphicon glyphicon-hand-up"}>
+              {" swipe to navigate"}
+            </span>
+          </div>
+        ) : (
+          ""
+        )}
 
         <div
           className="d-flex justify-content-center mainWindowContainer"
           id="mainWindowCon"
         >
-          <div
-            className="d-flex justify-content-center align-items-center sectionDiv"
-            id="secionDivComp"
-          >
-            <div
-              className="glyphicon glyphicon-chevron-left arrowLeft"
-              onClick={this.prevSection}
-            ></div>
-
-            <PerfectScrollbar className="scroller">
-              <div className="innerDiv">
+          <div className="sectionDiv" id="secionDivComp">
+            <div className="centralDiv">
+              {!isMobile ? (
+                <div
+                  className="glyphicon glyphicon-chevron-left arrowLeft"
+                  onClick={this.prevSection}
+                ></div>
+              ) : (
+                ""
+              )}
+              <div className="innerDiv customScrollbarDiv">
                 <div className="conatiningDiv">
                   {items.map((item, index) => (
                     <CSSTransition
@@ -138,12 +146,15 @@ class PageTemplate extends Component {
                   ))}
                 </div>
               </div>
-            </PerfectScrollbar>
-
-            <div
-              className="glyphicon glyphicon-chevron-right arrowRight"
-              onClick={this.nextSection}
-            ></div>
+              {!isMobile ? (
+                <div
+                  className="glyphicon glyphicon-chevron-right arrowRight"
+                  onClick={this.nextSection}
+                ></div>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
         </div>
 

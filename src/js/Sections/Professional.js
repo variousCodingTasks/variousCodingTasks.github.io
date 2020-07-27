@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 import PageTemplate from "../PageTemplate";
 
-const title = "Professional Experience";
+const title = "Work Experience";
 
 const traditionParagraph1 =
   "I am in charge of the electronic trading platform project, including the\
