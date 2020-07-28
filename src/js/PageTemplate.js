@@ -109,9 +109,7 @@ class PageTemplate extends Component {
         <NavBar sectionIndex={sectionIndex} />
         {isMobile ? (
           <div className="swipeIcon">
-            <span className={"glyphicon glyphicon-hand-up"}>
-              {" swipe to navigate"}
-            </span>
+            <span className={"glyphicon glyphicon-hand-up"}>{"swipe"}</span>
           </div>
         ) : (
           ""
@@ -121,7 +119,12 @@ class PageTemplate extends Component {
           className="d-flex justify-content-center mainWindowContainer"
           id="mainWindowCon"
         >
-          <div className="sectionDiv" id="secionDivComp">
+          <div
+            className={
+              isMobile ? "sectionDiv sectionDivMobileMarginTop" : "sectionDiv"
+            }
+            id="secionDivComp"
+          >
             <div className="centralDiv">
               {!isMobile ? (
                 <div

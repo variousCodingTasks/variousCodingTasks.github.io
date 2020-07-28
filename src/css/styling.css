@@ -16,12 +16,16 @@
 
 .sectionDiv {
   position: relative;
-  text-align: center;
   display: inline-block;
+  text-align: center;
   align-items: center;
   vertical-align: middle;
   height: 80%;
   width: 98%;
+}
+
+.sectionDivMobileMarginTop {
+  margin-top: -18%;
 }
 
 .centralDiv {
@@ -29,7 +33,7 @@
   text-align: center;
   align-items: center;
   vertical-align: middle;
-  height: 90%;
+  height: 100%;
   width: 90%;
   margin-left: 5%;
   overflow: hidden;

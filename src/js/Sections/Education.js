@@ -11,7 +11,7 @@ class EducationSection extends Component {
       <PageTemplate sectionIndex={this.props.sectionIndex}>
         <section>
           <h1 className="title">{title}</h1>
-          <h3 className="secondaryTitle">{"Degrees"}</h3>
+          <h3 className="secondaryTitle progListUL">{"Degrees"}</h3>
           <ul>
             <li className="listItem">
               {
