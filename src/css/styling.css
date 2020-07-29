@@ -7,11 +7,20 @@
   background-position: center;
 }
 
+.backgroundContainer {
+  margin-top: -20px;
+  width: 120%;
+  height: 120%;
+  background-image: url("../files/Screenshot from 2020-07-19 19-48-12.png");
+  background-position: center;
+}
+
 .mainWindowContainer {
   position: absolute;
   align-items: center;
   width: 100%;
   height: 100%;
+  z-index: 999;
 }
 
 .sectionDiv {

@@ -17,6 +17,7 @@ var touchendY = 0;
 class PageTemplate extends Component {
   constructor(props) {
     super(props);
+    this.backgroundDivRef = React.createRef();
 
     this.nextSection = this.nextSection.bind(this);
     this.prevSection = this.prevSection.bind(this);
@@ -24,6 +25,7 @@ class PageTemplate extends Component {
     this.handleKeyPressed = this.handleKeyPressed.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
     this.handleTouchEnd = this.handleTouchEnd.bind(this);
+    this.handleMouseMove = this.handleMouseMove.bind(this);
   }
 
   nextSection() {
@@ -88,6 +90,15 @@ class PageTemplate extends Component {
     }
   }
 
+  handleMouseMove(e) {
+    const windowWidth = window.innerWidth / 1.5;
+    const windowHeight = window.innerHeight / 1.5;
+
+    const mouseX = e.clientX / windowWidth;
+    const mouseY = e.clientY / windowHeight;
+    this.backgroundDivRef.current.style.transform = `translate(-${mouseX}%, -${mouseY}%)`;
+  }
+
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyPressed, false);
   }
@@ -105,6 +116,7 @@ class PageTemplate extends Component {
         onWheel={(e) => this.handleWheel(e)}
         onTouchStart={(e) => this.handleTouchStart(e)}
         onTouchEnd={(e) => this.handleTouchEnd(e)}
+        onMouseMove={(e) => this.handleMouseMove(e)}
       >
         <NavBar sectionIndex={sectionIndex} />
         {isMobile ? (
@@ -162,6 +174,14 @@ class PageTemplate extends Component {
         </div>
 
         <BottomNavBar />
+        {isMobile ? (
+          ""
+        ) : (
+          <div
+            className="backgroundContainer"
+            ref={this.backgroundDivRef}
+          ></div>
+        )}
       </div>
     );
   }
