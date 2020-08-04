@@ -169,14 +169,40 @@
   text-align: right;
 }
 
+/*.buttonContainer {
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 0px;
+}*/
+
+.toggleButton {
+  position: fixed;
+  margin-left: 87%;
+  top: 1%;
+  user-select: none;
+}
+
 .cornerIcon {
-  margin-right: px;
+  user-select: none;
+  margin-right: 10px;
   font-weight: 800;
   font-size: 20px;
   color: rgb(200, 200, 210);
   font-family: "Courier New";
   user-select: none;
 }
+
+.burgerButton {
+  font-size: 20px;
+  color: rgb(200, 200, 210);
+  user-select: none;
+}
+
+/*.burgerButton:hover {
+  transform: rotate(-90deg);
+  transition-duration: 0.3s;
+}*/
 
 .navBarItem {
   position: relative;
@@ -231,16 +257,6 @@
   color: rgb(90, 90, 97);
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
-}
-
-.burgerButton {
-  font-size: 20px;
-  color: rgb(200, 200, 210);
-}
-
-.burgerButton:hover {
-  transform: rotate(-90deg);
-  transition-duration: 0.3s;
 }
 
 .fade-appear {

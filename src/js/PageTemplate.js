@@ -116,7 +116,7 @@ class PageTemplate extends Component {
         onWheel={(e) => this.handleWheel(e)}
         onTouchStart={(e) => this.handleTouchStart(e)}
         onTouchEnd={(e) => this.handleTouchEnd(e)}
-        onMouseMove={(e) => this.handleMouseMove(e)}
+        onMouseMove={isMobile ? () => false : (e) => this.handleMouseMove(e)}
       >
         <NavBar sectionIndex={sectionIndex} />
         {isMobile ? (

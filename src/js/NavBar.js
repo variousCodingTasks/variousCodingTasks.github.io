@@ -15,7 +15,7 @@ class NavBar extends Component {
       <nav className="navbar fixed-top navbar-expand-md navBar">
         <button
           type="button"
-          className="navbar-toggler"
+          className="navbar-toggler toggleButton"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
         >
