@@ -74,7 +74,14 @@ class TechSkillsSection extends Component {
               {
                 "complex asset valuation, financial modelling and analysis, financial data,\
                   computational finance, fintech, middle office and back office operations,\
-                  risk modeling, and I know how to use the computer stuff in order to enhance the finance stuff..."
+                  risk modeling and management, and I know how to use the computer stuff in\
+                  order to enhance the finance stuff..."
+              }
+            </li>
+            <li className="listItem">
+              {
+                "I am very experienced with wide a range of financial assets classes: interest rate derivatives,\
+                 FX derivatives (forwards, futures, NDFs and options), sovereign and corporate bonds and more."
               }
             </li>
           </ul>
