@@ -183,6 +183,10 @@
   user-select: none;
 }
 
+.toggleButton:focus {
+  outline: none;
+}
+
 .cornerIcon {
   user-select: none;
   margin-right: 10px;
