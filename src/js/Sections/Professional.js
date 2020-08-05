@@ -33,7 +33,7 @@ const softwareStartup =
 const project1 =
   "Web application for trade documentation and pricing: \
    I used React.js and Django web framework, I also used DRF to create a RESTful\
-   API for frontend-backend communication and MySQL for the DB server. I deployed\
+   API for frontend-backend communication and MySQL for DB. I deployed\
    the application on a Linux machine with NGINX web server and uWSGI.";
 
 const project2 =
@@ -58,8 +58,10 @@ class ProfesionalSection extends Component {
           </h3>
           <p className="paragraph">{softwareStartup}</p>
           <h3 className="secondaryTitle">{"Recent Projects"}</h3>
-          <p className="paragraph">{project1}</p>
-          <p className="paragraph">{project2}</p>
+          <ul>
+            <li className="listItem">{project1}</li>
+            <li className="listItem">{project2}</li>
+          </ul>
         </section>
       </PageTemplate>
     );
