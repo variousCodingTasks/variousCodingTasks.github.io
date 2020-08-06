@@ -80,7 +80,7 @@ class TechSkillsSection extends Component {
             </li>
             <li className="listItem">
               {
-                "I am very experienced with wide a range of financial assets classes: interest rate derivatives,\
+                "I am very experienced with a wide range of financial assets classes: interest rate derivatives,\
                  FX derivatives (forwards, futures, NDFs and options), sovereign and corporate bonds and more."
               }
             </li>
