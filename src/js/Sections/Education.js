@@ -12,7 +12,7 @@ class EducationSection extends Component {
         <section>
           <h1 className="title">{title}</h1>
           <h3 className="secondaryTitle progListUL">{"Degrees"}</h3>
-          <ul>
+          <ul className="list-group progListUL">
             <li className="listItem">
               {
                 "M.Sc. Computer Science, OMSCS, Georgia Institute of Technology, 2022 (expected)"
@@ -33,17 +33,7 @@ class EducationSection extends Component {
             </li>
           </ul>
           <h3 className="secondaryTitle">{"Additional Courses"}</h3>
-          <ul>
-            <li className="listItem">
-              {
-                "The Open University of Israel: Introduction to Artificial Intelligence"
-              }
-            </li>
-            <li className="listItem">
-              {
-                "Tel-Aviv University: Advanced Topics in Data Mining and Knowledge Discovery"
-              }
-            </li>
+          <ul className="list-group progListUL">
             <li className="listItem">
               <h4 className="listItem">{"Coursera:"}</h4>
               <ul>
@@ -62,6 +52,18 @@ class EducationSection extends Component {
                 <li className="listItem">{"Data Wrangling with MongoDB"}</li>
                 <li className="listItem">{"Intro to Java"}</li>
                 <li className="listItem">{"Design of Computer Programs"}</li>
+              </ul>
+            </li>
+            <li className="listItem">
+              <h4 className="listItem">{"The Open University of Israel:"}</h4>
+              <ul>
+                <li>{"Introduction to Artificial Intelligence"}</li>
+              </ul>
+            </li>
+            <li className="listItem">
+              <h4 className="listItem">{"Tel-Aviv University:"}</h4>
+              <ul>
+                <li>{"Data Mining and Knowledge Discovery"}</li>
               </ul>
             </li>
           </ul>

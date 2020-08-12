@@ -11,7 +11,7 @@ const paragraph1 =
 
 const paragraph2 =
   "I can work under pressure and uncertainty. My knowledge and experience are multidisciplinary,\
-  and when required, I can become a specialist in any field...";
+  and when required, I can become a specialist in any new field (after some reading and learning)...";
 
 const paragraph3 =
   "I like to keep things tidy and in order, in both my physical and virtual environments.";

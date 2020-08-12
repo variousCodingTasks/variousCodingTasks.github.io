@@ -20,10 +20,6 @@ const traditionParagraph2 =
     I use any technologies or tools I find suitable, but mainly Python, SQL, Excel\
     and VBA, Javasript and more.";
 
-const traditionParagraph3 =
-  "Throughout my years of experience, I have helped improving the overall productivity\
-   and efficiency, which greatly improved profitability and customer satisfaction.";
-
 const softwareStartup =
   "I established and led a team of six members who were responsible for monitoring, operating and\
   installing the production servers. The team worked alongside the R&D team in order to test new\
@@ -31,13 +27,13 @@ const softwareStartup =
   anomalies or irregularities.";
 
 const project1 =
-  "Web application for trade documentation and pricing: \
+  "-Web application for trade documentation and pricing: \
    I used React.js and Django web framework, I also used DRF to create a RESTful\
    API for frontend-backend communication and MySQL for DB. I deployed\
-   the application on a Linux machine with NGINX web server and uWSGI.";
+   the application NGINX web server and uWSGI.";
 
 const project2 =
-  "Desktop application for financial instruments pricing: \
+  "-Desktop application for financial instruments pricing: \
    I used Python and Python Tkinter for GUI and logic development and the built-in SQLite for\
    data management. I connected the app to Bloomberg's API for external data feed.";
 
@@ -52,16 +48,13 @@ class ProfesionalSection extends Component {
           </h3>
           <p className="paragraph">{traditionParagraph1}</p>
           <p className="paragraph">{traditionParagraph2}</p>
-          <p className="paragraph">{traditionParagraph3}</p>
           <h3 className="secondaryTitle">
             {"Software Startup - R&D DevOps Team Manager - 2010-2011:"}
           </h3>
           <p className="paragraph">{softwareStartup}</p>
-          <h3 className="secondaryTitle">{"Recent Projects"}</h3>
-          <ul>
-            <li className="listItem">{project1}</li>
-            <li className="listItem">{project2}</li>
-          </ul>
+          <h3 className="secondaryTitle">{"Most Recent Projects"}</h3>
+          <p className="listItem">{project1}</p>
+          <p className="listItem">{project2}</p>
         </section>
       </PageTemplate>
     );
